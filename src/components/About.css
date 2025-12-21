@@ -5,19 +5,19 @@
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 8rem;
   align-items: center;
 }
 
 .about-text {
-  padding-right: 20px;
+  padding-right: 2rem;
 }
 
 .principles-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #2c2c2c;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   text-align: left;
 }
 
@@ -28,7 +28,7 @@
 .principles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 3rem;
 }
 
 .principle-card {
@@ -36,13 +36,13 @@
   overflow: hidden;
   background: #fafafa;
   padding: 0;
-  border-radius: 12px;
-  border: 1px solid #e8e8e0;
+  border-radius: 1.2rem;
+  border: 0.1rem solid #e8e8e0;
 }
 
 .principle-media {
   position: relative;
-  height: 160px;
+  height: 16rem;
   background-size: cover;
   background-position: center;
 }
@@ -51,33 +51,33 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.35) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.35) 100%);
 }
 
 .principle-body {
-  padding: 18px 20px 22px;
+  padding: 1.8rem 2rem 2.2rem;
 }
 
 .principle-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.85);
-  border: 1px solid #e8e8e0;
-  border-radius: 10px;
+  width: 4.4rem;
+  height: 4.4rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 0.1rem solid #e8e8e0;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #2c2c2c;
   font-size: 1.1rem;
-  margin-top: -22px;
+  margin-top: -2.2rem;
 }
 
 .principle-title {
   font-size: 1.05rem;
   font-weight: 700;
   color: #2c2c2c;
-  margin-top: 12px;
-  margin-bottom: 6px;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .principle-description {
@@ -93,14 +93,14 @@
 }
 
 .founder-bio {
-  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 
 .founder-name {
   font-size: 1.125rem;
   font-weight: 700;
   color: #2c2c2c;
-  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 
 .founder-text {
@@ -110,8 +110,8 @@
 
 .founder-image {
   width: 100%;
-  max-width: 400px;
-  height: 500px;
+  max-width: 30rem;
+  height: 35rem;
   background: linear-gradient(135deg, #f5f5f0, #e8e8e0);
 }
 
@@ -121,13 +121,13 @@
 
 .founder-image .placeholder-icon {
   font-size: 4rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .founder-image .placeholder-content p {
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .founder-image .placeholder-content small {
@@ -139,33 +139,40 @@
 @media (max-width: 968px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 6rem;
   }
-  
+
   .about-text {
     padding-right: 0;
   }
-  
+
   .about-image {
     order: -1;
   }
-  
+
   .founder-image {
-    max-width: 350px;
-    height: 400px;
+    max-width: 30rem;
+    height: 35rem;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-  .principles-grid { grid-template-columns: 1fr; }
-  .principle-media { height: 140px; }
-  .principle-card {
-    padding: 20px;
+  .principles-grid {
+    grid-template-columns: 1fr;
   }
-  
+
+  .principle-media {
+    height: 14rem;
+  }
+
+  .principle-card {
+    padding: 2rem;
+  }
+
   .founder-image {
-    max-width: 300px;
-    height: 350px;
+    max-width: 30rem;
+    height: 35rem;
   }
 }
 
@@ -173,9 +180,9 @@
   .about-content {
     gap: 40px;
   }
-  
+
   .founder-image {
-    max-width: 280px;
-    height: 320px;
+    max-width: 25rem;
+    height: 25rem;
   }
 }

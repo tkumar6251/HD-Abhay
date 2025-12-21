@@ -10,7 +10,7 @@ const Contact = () => {
         <p className="section-subtitle">
           Ready to transform your space? Get in touch and let's start your design journey.
         </p>
-        
+
         <div className="contact-content">
           <div className="contact-info">
             <div className="contact-details">
@@ -23,17 +23,17 @@ const Contact = () => {
                   <p>+91 999 910 9397</p>
                 </div>
               </div>
-              
+
               <div className="contact-item">
                 <div className="contact-icon">
                   <FaEnvelope />
                 </div>
                 <div className="contact-text">
                   <h4>Email</h4>
-                  <p>contact@hidezign.com</p>
+                  <p>info@hidzign.com</p>
                 </div>
               </div>
-              
+
               <div className="contact-item">
                 <div className="contact-icon">
                   <FaMapMarkerAlt />
@@ -43,19 +43,19 @@ const Contact = () => {
                   <p>Noida , Uttar Pradesh, India</p>
                 </div>
               </div>
-              
+
               <div className="contact-item">
                 <div className="contact-icon">
                   <FaInstagram />
                 </div>
                 <div className="contact-text">
                   <h4>Instagram</h4>
-                  <p>@hidezign</p>
+                  <p>@hidzign</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="contact-actions">
             <div className="action-cards">
               <div className="action-card whatsapp-card">
@@ -68,7 +68,7 @@ const Contact = () => {
                   Start Chat
                 </a>
               </div>
-              
+
               <div className="action-card schedule-card">
                 <div className="action-icon">
                   <FaCalendarAlt />
@@ -82,7 +82,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="contact-footer">
           <p className="contact-tagline">
             Every great design starts with a conversation. Let's talk about your vision.

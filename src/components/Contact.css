@@ -5,40 +5,40 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 8rem;
   align-items: start;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 25px;
+  gap: 2rem;
+  padding: 2.5rem;
   background: #f5f5f0;
-  border-radius: 12px;
-  border: 1px solid #e8e8e0;
+  border-radius: 1.2rem;
+  border: 0.1rem solid #e8e8e0;
   transition: all 0.3s ease;
 }
 
 .contact-item:hover {
   background: white;
-  box-shadow: 0 10px 25px rgba(74, 103, 65, 0.1);
+  box-shadow: 0 1rem 2.5rem rgba(74, 103, 65, 0.1);
   border-color: #4a6741;
-  transform: translateY(-2px);
+  transform: translateY(-0.2rem);
 }
 
 .contact-icon {
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   background: linear-gradient(135deg, #4a6741, #6b8e5a);
-  border-radius: 12px;
+  border-radius: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #2c2c2c;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .contact-text p {
@@ -62,15 +62,15 @@
 .action-cards {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
 }
 
 .action-card {
   background: white;
-  padding: 40px 30px;
-  border-radius: 16px;
+  padding: 4rem 3rem;
+  border-radius: 1.6rem;
   text-align: center;
-  border: 1px solid #e8e8e0;
+  border: 0.1rem solid #e8e8e0;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -82,7 +82,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 0.4rem;
   background: linear-gradient(135deg, #4a6741, #6b8e5a);
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -93,8 +93,8 @@
 }
 
 .action-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(74, 103, 65, 0.15);
+  transform: translateY(-0.8rem);
+  box-shadow: 0 2.5rem 5rem rgba(74, 103, 65, 0.15);
   border-color: #4a6741;
 }
 
@@ -107,16 +107,16 @@
 }
 
 .action-icon {
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   background: linear-gradient(135deg, #4a6741, #6b8e5a);
-  border-radius: 20px;
+  border-radius: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 2rem;
-  margin: 0 auto 25px;
+  margin: 0 auto 2.5rem;
   transition: all 0.3s ease;
 }
 
@@ -132,14 +132,14 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #2c2c2c;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .action-card p {
   color: #6b6b6b;
   line-height: 1.6;
   font-size: 0.95rem;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 .btn-whatsapp {
@@ -149,14 +149,14 @@
 
 .btn-whatsapp:hover {
   background: linear-gradient(135deg, #128c7e, #0d6b5a);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2.5rem rgba(37, 211, 102, 0.3);
 }
 
 .contact-footer {
   text-align: center;
-  padding-top: 40px;
-  border-top: 1px solid #e8e8e0;
+  padding-top: 4rem;
+  border-top: 0.1rem solid #e8e8e0;
 }
 
 .contact-tagline {
@@ -164,7 +164,7 @@
   color: #4a6741;
   font-weight: 500;
   font-style: italic;
-  max-width: 600px;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
@@ -172,42 +172,42 @@
 @media (max-width: 968px) {
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 6rem;
   }
-  
+
   .action-cards {
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .contact-content {
-    gap: 40px;
+    gap: 4rem;
   }
-  
+
   .action-cards {
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
   }
-  
+
   .contact-item {
-    padding: 20px;
+    padding: 2rem;
   }
-  
+
   .action-card {
-    padding: 30px 20px;
+    padding: 3rem 2rem;
   }
-  
+
   .contact-icon {
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     font-size: 1.125rem;
   }
-  
+
   .action-icon {
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     font-size: 1.75rem;
   }
 }
@@ -217,20 +217,12 @@
     padding: 15px;
     gap: 15px;
   }
-  
+
   .action-card {
     padding: 25px 15px;
   }
-  
+
   .contact-tagline {
     font-size: 1.125rem;
   }
 }
-
-
-
-
-
-
-
-

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  /* 10px baseline */
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,9 +17,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: #2c2c2c;
+  font-size: 1.6rem;
+  /* 16px */
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Global Responsive Scaling */
+@media (max-width: 992px) {
+  html {
+    font-size: 50%;
+    /* 8px baseline (~20% reduction) */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 40.625%;
+    /* 6.5px baseline (35% reduction from 10px) */
+  }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
@@ -27,16 +61,16 @@ code {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
@@ -49,41 +83,43 @@ code {
 
 .btn-primary:hover {
   background: linear-gradient(135deg, #3d5536, #5a7449);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(220, 224, 219, 0.3);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2.5rem rgba(220, 224, 219, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 0.2rem solid #ffffff;
 }
 
 .btn-secondary:hover {
   background: #4a6741;
   color: white;
-  border: 2px solid #5a7449;
-  transform: translateY(-2px);
+  border: 0.2rem solid #5a7449;
+  transform: translateY(-0.2rem);
 }
 
 .section {
-  padding: 80px 0;
+  padding: 8rem 0;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  /* 40px -> 4rem */
   font-weight: 700;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   color: #2c2c2c;
 }
 
 .section-subtitle {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  /* 1.25rem * 1.6 = 20px -> 2rem */
   color: #6b6b6b;
   text-align: center;
-  margin-bottom: 40px;
-  max-width: 600px;
+  margin-bottom: 4rem;
+  max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -116,29 +152,11 @@ code {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-  
-  .section {
-    padding: 60px 0;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-}
-
+/* Responsive Design - Managed by Root Font Scaling */
+/* Additional specific overrides can go here if needed, but size scaling is now handled globally */
