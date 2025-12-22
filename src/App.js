@@ -7,11 +7,15 @@ import Clients from './components/Clients';
 import Contact from './components/Contact';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+
+import BackToTop from './components/BackToTop';
+import BackgroundWatermark from './components/BackgroundWatermark';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <BackgroundWatermark />
       <NavBar />
       <Hero />
       <About />
@@ -19,7 +23,9 @@ function App() {
       <Portfolio />
       <Clients />
       <Contact />
+
       <Footer />
+      <BackToTop />
     </div>
   );
 }

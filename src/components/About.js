@@ -32,16 +32,17 @@ const About = () => {
 
   return (
     <section className="about section" id="about">
+      <div className="about-background" style={{ backgroundImage: "url(/asset/ba.jpg)" }} />
       <div className="container">
         <div className="about-content">
           <div className="about-text">
             <h2 className="section-title">Spaces that welcome every story</h2>
             <p className="section-subtitle">
-              Hi Dezign is a studio built on a simple belief: Great design is meant for everyone. 
-              We blend diversity, inclusion, and innovation to create spaces that reflect identity, 
+              Hi Dezign is a studio built on a simple belief: Great design is meant for everyone.
+              We blend diversity, inclusion, and innovation to create spaces that reflect identity,
               enhance well-being, and inspire everyday life.
             </p>
-            
+
             <div className="design-principles">
               <h3 className="principles-title">How We Design</h3>
               <div className="principles-grid">
@@ -60,7 +61,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="about-image">
             <div className="placeholder-image founder-image">
               <div className="placeholder-content">

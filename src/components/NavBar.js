@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaMobileAlt } from 'react-icons/fa';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -7,8 +8,8 @@ const NavBar = () => {
 	return (
 		<header className="navbar">
 			<div className="container nav-inner">
-				<a href="#hero" className="nav-logo" aria-label="Hi Dezign Home">
-					<img src="/asset/log.png" alt="Hi Dezign" className="nav-logo-img" />
+				<a href="#hero" className="nav-logo" aria-label="Hi Dzign Home">
+					<img src="/asset/log.png" alt="Hi Dzign" className="nav-logo-img" />
 				</a>
 
 				<button
@@ -28,6 +29,9 @@ const NavBar = () => {
 					<a href="#portfolio" className="nav-link">Portfolio</a>
 					<a href="#clients" className="nav-link">Clients</a>
 					<a href="#contact" className="nav-btn">Contact</a>
+					<a href="#download" className="nav-btn nav-btn-app">
+						<FaMobileAlt /> Download App
+					</a>
 				</nav>
 			</div>
 		</header>

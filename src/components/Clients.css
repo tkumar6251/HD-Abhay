@@ -61,7 +61,7 @@
 }
 
 .client-title {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #2c2c2c;
   margin-bottom: 1.5rem;
@@ -70,7 +70,7 @@
 .client-description {
   color: #6b6b6b;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 .clients-footer {

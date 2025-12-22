@@ -1,8 +1,21 @@
 .contact {
   background: #ffffff;
+  position: relative;
+}
+
+.contact-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .contact-content {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
@@ -48,7 +61,7 @@
 }
 
 .contact-text h4 {
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #2c2c2c;
   margin-bottom: 0.5rem;
@@ -56,7 +69,7 @@
 
 .contact-text p {
   color: #6b6b6b;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 .action-cards {
@@ -129,7 +142,7 @@
 }
 
 .action-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #2c2c2c;
   margin-bottom: 1.5rem;
@@ -138,7 +151,7 @@
 .action-card p {
   color: #6b6b6b;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   margin-bottom: 2.5rem;
 }
 

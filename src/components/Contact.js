@@ -5,6 +5,7 @@ import './Contact.css';
 const Contact = () => {
   return (
     <section className="contact section" id="contact">
+      <div className="contact-background" style={{ backgroundImage: "url(/asset/bg.jpg)" }} />
       <div className="container">
         <h2 className="section-title">Let's Create Something Beautiful Together</h2>
         <p className="section-subtitle">

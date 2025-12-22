@@ -44,12 +44,13 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio section" id="portfolio">
+      <div className="portfolio-background" style={{ backgroundImage: "url(/asset/bf.jpg)" }} />
       <div className="container">
         <h2 className="section-title">Our Design Stories</h2>
         <p className="section-subtitle">
           Each project tells a unique story of transformation and inspiration
         </p>
-        
+
         <div className="portfolio-grid">
           {projects.map((project) => (
             <div key={project.id} className="portfolio-item">
@@ -80,7 +81,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="portfolio-footer">
           <p className="coming-soon">More Projects Coming Soon</p>
           <a href="#contact" className="btn btn-secondary">

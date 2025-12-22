@@ -4,16 +4,22 @@
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background: rgba(255, 255, 255, 0.7);
-	backdrop-filter: saturate(150%) blur(0.2rem);
-	border-bottom: 0.1rem solid rgba(232, 232, 224, 0.8);
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: saturate(180%) blur(12px);
+	-webkit-backdrop-filter: saturate(180%) blur(12px);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	transition: all var(--transition-smooth);
 }
 
 .nav-inner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 7rem;
+	height: 8rem;
+	/* Increased height for premium feel */
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 4rem;
 }
 
 .nav-logo {
@@ -24,7 +30,7 @@
 }
 
 .nav-logo-img {
-	height: 5.5rem;
+	height: 6rem;
 	width: auto;
 	object-fit: contain;
 }
@@ -32,39 +38,55 @@
 .nav-links {
 	display: flex;
 	align-items: center;
-	gap: 2.4rem;
+	gap: 4rem;
 }
 
 .nav-link {
 	text-decoration: none;
-	color: #2c2c2c;
-	font-weight: 600;
-	font-size: 1.52rem;
-	/* Restored: ~15.2px */
-	padding: 1rem 0.6rem;
-	border-radius: 0.8rem;
-	transition: color 0.2s ease, background 0.2s ease;
+	color: var(--color-text-secondary);
+	font-weight: 500;
+	font-size: 1.5rem;
+	padding: 0.8rem 1.2rem;
+	border-radius: var(--radius-sm);
+	transition: all var(--transition-fast);
 }
 
 .nav-link:hover {
-	background: rgba(245, 245, 240, 0.9);
+	color: var(--color-primary);
+	background: rgba(61, 90, 64, 0.05);
 }
 
 .nav-btn {
 	text-decoration: none;
-	background: linear-gradient(135deg, #f5f5f0, #e8e8e0);
-	color: #1f1f1f;
-	font-weight: 700;
-	padding: 1rem 1.6rem;
-	border-radius: 1rem;
-	border: 0.1rem solid #e8e8e0;
-	transition: all 0.2s ease;
+	background: var(--color-primary);
+	color: white;
+	font-weight: 600;
+	padding: 1.2rem 2.4rem;
+	border-radius: var(--radius-md);
+	font-size: 1.5rem;
+	transition: all var(--transition-fast);
+	box-shadow: var(--shadow-sm);
+}
+
+.nav-btn-app {
+	background: #1a1a1a;
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.8rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn-app:hover {
+	background: #000000;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);
 }
 
 .nav-btn:hover {
-	background: linear-gradient(135deg, #ffffff, #f5f5f0);
-	transform: translateY(-0.1rem);
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-md);
+	background: var(--color-primary-dark);
 }
 
 .nav-toggle {

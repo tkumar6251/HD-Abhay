@@ -1,8 +1,21 @@
 .portfolio {
   background: #ffffff;
+  position: relative;
+}
+
+.portfolio-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .portfolio-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 4rem;
@@ -43,6 +56,12 @@
 .project-placeholder .placeholder-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+}
+
+.section-title,
+.section-subtitle {
+  position: relative;
+  z-index: 1;
 }
 
 .project-placeholder .placeholder-content p {
@@ -110,7 +129,7 @@
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 2rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
@@ -118,7 +137,7 @@
 }
 
 .portfolio-title {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #2c2c2c;
   margin-bottom: 1rem;
@@ -127,7 +146,7 @@
 .portfolio-description {
   color: #6b6b6b;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 .portfolio-footer {
@@ -137,7 +156,7 @@
 }
 
 .coming-soon {
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   color: #4a6741;
   font-weight: 600;
   margin-bottom: 3rem;

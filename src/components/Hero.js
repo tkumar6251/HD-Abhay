@@ -33,16 +33,16 @@ const Hero = () => {
         </div>
         <div className="hero-overlay"></div>
       </div>
-      
+
       <div className="hero-content">
         <div className="container">
           <div className="hero-text">
-            <h1 className="hero-title">Hi Dezign</h1>
+            <h1 className="hero-title">Hi Dzign</h1>
             <p className="hero-subtitle">Designing Spaces Where Everyone Belongs</p>
             <p className="hero-description">
               Creating beautiful, inclusive interiors that celebrate diversity and enhance everyday living.
             </p>
-            
+
             <div className="hero-buttons">
               <a href="#portfolio" className="btn btn-primary">
                 Explore Our Work
@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="scroll-indicator">
         <FaArrowDown className="scroll-arrow" />
       </div>

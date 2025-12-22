@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  FaHome, 
-  FaBuilding, 
-  FaTools, 
-  FaCube, 
-  FaChair, 
-  FaPalette, 
-  FaCheckCircle, 
-  FaHammer, 
-  FaMagic, 
-  FaYinYang 
+import {
+  FaHome,
+  FaBuilding,
+  FaTools,
+  FaCube,
+  FaChair,
+  FaPalette,
+  FaCheckCircle,
+  FaHammer,
+  FaMagic,
+  FaYinYang
 } from 'react-icons/fa';
 import './Services.css';
 
@@ -84,7 +84,7 @@ const Services = () => {
         <p className="section-subtitle">
           Comprehensive interior design services tailored to bring your vision to life
         </p>
-        
+
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
@@ -99,9 +99,9 @@ const Services = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="services-cta">
-          <a href="#contact" className="btn btn-primary btn-large">
+          <a href="#contact" className="nav-btn">
             Book Free Consultation
           </a>
         </div>

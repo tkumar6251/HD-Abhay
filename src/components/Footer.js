@@ -4,6 +4,7 @@ import './Footer.css';
 const Footer = () => {
 	return (
 		<footer className="footer">
+			<div className="footer-background" style={{ backgroundImage: "url(/asset/bh.jpg)" }} />
 			<div className="container footer-inner">
 				<div className="footer-brand">
 					<img src="/asset/log.png" alt="Hi Dezign" className="footer-logo" />
@@ -13,7 +14,7 @@ const Footer = () => {
 				<div className="footer-links">
 					<div className="footer-col">
 						<h4 className="footer-col-title">Social</h4>
-						<a href="https://instagram.com/hidezign" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
+						<a href="https://instagram.com/hidzign" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
 						<a href="https://facebook.com" target="_blank" rel="noreferrer" className="footer-link">Facebook</a>
 						<a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
 					</div>
@@ -39,8 +40,8 @@ const Footer = () => {
 			</div>
 
 			<div className="footer-bottom">
-				<p className="footer-copy">© {new Date().getFullYear()} Hi Dezign. All rights reserved.</p>
-				<p className="footer-credit">Created by <a href="https://www.codescrafters.in" target="_blank" rel="noreferrer">CodesCrafters</a></p>
+				<p className="footer-copy">© {new Date().getFullYear()} Hi Dzign. All rights reserved.</p>
+				<p className="footer-credit">Created by <a href="https://www.kraftwagenksp.com" target="_blank" rel="noreferrer">KRAFTWAGEN KSP PRIVATE LIMITED</a></p>
 			</div>
 		</footer>
 	);
