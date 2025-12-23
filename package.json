@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Hi Dezign - Interior Design Portfolio Website",
   "main": "index.js",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
