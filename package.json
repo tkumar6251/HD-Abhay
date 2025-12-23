@@ -1,6 +1,7 @@
 {
   "name": "hidezign-portfolio",
   "version": "1.0.0",
+  "homepage": ".",
   "description": "Hi Dezign - Interior Design Portfolio Website",
   "main": "index.js",
   "engines": {
