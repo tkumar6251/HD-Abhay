@@ -189,15 +189,15 @@
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 1.65rem;
   }
 
   .hero-buttons {
@@ -213,7 +213,15 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.35rem;
   }
 
   .hero-text {
