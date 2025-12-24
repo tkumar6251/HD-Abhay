@@ -15,7 +15,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 8rem;
+	height: 7rem;
 	/* Increased height for premium feel */
 	max-width: 1400px;
 	margin: 0 auto;
@@ -134,5 +134,19 @@
 		opacity: 1;
 		pointer-events: auto;
 		transform: translateY(0);
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar {
+		height: 6rem;
+	}
+
+	.nav-logo {
+		height: 4rem;
+	}
+
+	.nav-logo-img {
+		height: 4rem;
 	}
 }
