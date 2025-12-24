@@ -65,9 +65,9 @@ const About = () => {
           <div className="about-image">
             <div className="placeholder-image founder-image">
               <div className="placeholder-content">
-                <div className="placeholder-icon"><img src="/asset/ab/ab.jpg" alt="ab" /></div>
-                <p>Founder Image</p>
-                <small>The mind behind the magic</small>
+                <div className="placeholder-icon"><img src="/asset/ab/ab.jpg" alt="Abhay Pratap Singh - Founder and Principal Designer at Hi Dezign" /></div>
+                <p>Abhay Pratap Singh</p>
+                <small>Principal Designer</small>
               </div>
             </div>
             <div className="founder-bio">
