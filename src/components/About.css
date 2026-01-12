@@ -1,6 +1,7 @@
 .about {
   background: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 .about-background {
@@ -8,211 +9,383 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.08;
+  opacity: 0.05;
   z-index: 0;
   pointer-events: none;
 }
 
-
-.about-content {
+.container {
+  max-width: 1400px;
+  /* Increased width for horizontal cards */
+  margin: 0 auto;
+  padding: 0 2rem;
   position: relative;
   z-index: 1;
+}
+
+/* ============================
+   TOP SECTION: Story & Founder
+   ============================ */
+.about-top-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 1fr 0.8fr;
+  /* Story gets more space, Founder compact right */
+  gap: 6rem;
+  margin-top: 10rem;
   align-items: center;
 }
 
-.about-text {
+/* LEFT: Story */
+.about-story-left {
   padding-right: 2rem;
 }
 
-.section-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 3rem;
-  text-align: center;
+.story-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  line-height: 1.2;
 }
 
-.section-subtitle {
-  font-size: 1.5rem;
-  color: #2c2c2c;
-  margin-bottom: 3rem;
-  text-align: center;
+.story-description {
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  line-height: 1.8;
+  max-width: 60ch;
+  text-align: justify;
 }
 
-.principles-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.design-principles {
+/* QUOTE STYLING */
+.story-quote-container {
+  margin-top: 4rem;
   position: relative;
+  padding-left: 4rem;
+  max-width: 55ch;
+}
+
+.big-quote {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-size: 8rem;
+  line-height: 1;
+  font-family: serif;
+  color: #264626;
+  /* Accent Green */
+  opacity: 0.2;
+}
+
+.story-quote-text {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Playfair Display', serif;
+  /* Or keep inherit if not available */
+}
+
+.quote-author {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #264626;
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+/* RIGHT: Founder */
+.about-founder-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center align content */
+  text-align: center;
+}
+
+.founder-image-wrapper {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.08);
+  /* Stylish offset shadow */
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.founder-img:hover {
+  transform: scale(1.05);
+}
+
+.founder-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.founder-role {
+  font-size: 1.4rem;
+  color: #264626;
+  /* Forest Green Accent */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.founder-text {
+  font-size: 1.5rem;
+  color: #666;
+  max-width: 300px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* ============================
+   BOTTOM SECTION: How We Design
+   ============================ */
+.about-bottom-section {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.section-main-title {
+  font-size: 5rem;
+  /* Big Title */
+  font-weight: 900;
+  color: #0c0c0c;
+  margin-bottom: 6rem;
+  letter-spacing: -0.02em;
 }
 
 .principles-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 Columns Horizontal */
+  gap: 10rem;
+  padding-bottom: 2rem;
 }
 
 .principle-card {
+  background: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
   position: relative;
-  overflow: hidden;
-  background: #fafafa;
-  padding: 0;
-  border-radius: 1.2rem;
-  border: 0.1rem solid #e8e8e0;
+  /* overflow: hidden; Removed to let number float */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 280px;
 }
 
-.principle-media {
-  position: relative;
-  height: 16rem;
-  background-size: cover;
-  background-position: center;
+.principle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.principle-media::after {
-  content: '';
+/* BIG NUMBER STYLING */
+.card-number {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.35) 100%);
+  top: -80px;
+  /* Adjusted to keep it somewhat positioned */
+  right: -40px;
+  font-size: 28rem;
+  font-weight: 200;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.1);
+  /* Black, slightly visible */
+  z-index: 0;
+  font-family: 'Raleway', sans-serif;
+  pointer-events: none;
 }
 
 .principle-body {
-  padding: 1.8rem 2rem 2.2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .principle-icon {
   width: 5rem;
   height: 5rem;
-  background: rgba(255, 255, 255, 0.85);
-  border: 0.1rem solid #e8e8e0;
-  border-radius: 1rem;
+  background: #264626;
+  /* Accent Green */
+  color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2c2c2c;
-  font-size: 1.1rem;
-  margin-top: -2.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 16px rgba(38, 70, 38, 0.2);
 }
 
 .principle-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #2c2c2c;
-  margin-top: 1.2rem;
-  margin-bottom: 0.6rem;
-}
-
-.principle-description {
-  color: #6b6b6b;
-  line-height: 1.55;
-  font-size: 1.5rem;
-}
-
-.about-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.founder-bio {
-  margin-top: 1.6rem;
-}
-
-.founder-name {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #2c2c2c;
-  margin-bottom: 0.6rem;
-}
-
-.founder-text {
-  color: #6b6b6b;
-  line-height: 1.65;
-  font-size: 1.5rem;
-}
-
-.founder-image {
-  width: 100%;
-  max-width: 27rem;
-  height: 27rem;
-  background: linear-gradient(135deg, #f5f5f0, #e8e8e0);
-}
-
-.founder-image .placeholder-content {
-  color: #8b8b8b;
-}
-
-.founder-image .placeholder-icon {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-.founder-image .placeholder-content p {
-  font-size: 1.125rem;
-  font-weight: 600;
+  color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
-.founder-image .placeholder-content small {
-  font-size: 0.875rem;
-  opacity: 0.8;
+.principle-description {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.6;
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-  .about-content {
-    grid-template-columns: 1fr;
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+@media (max-width: 1200px) {
+  .card-number {
+    font-size: 20rem;
+    top: -60px;
+    right: -30px;
+  }
+
+  .principles-grid {
     gap: 6rem;
   }
+}
 
-  .about-text {
-    padding-right: 0;
+@media (max-width: 1024px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
   }
 
-  .about-image {
-    order: -1;
+  .card-number {
+    font-size: 16rem;
+    top: -40px;
+    right: -20px;
   }
 
-  .founder-image {
-    max-width: 30rem;
-    height: 35rem;
-    margin: 0 auto;
+  .about-top-section {
+    gap: 4rem;
+    margin-top: 6rem;
   }
 }
 
-@media (max-width: 768px) {
-  .principles-grid {
+@media (max-width: 900px) {
+  .about-top-section {
     grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+    margin-top: 4rem;
   }
 
-  .principle-media {
-    height: 14rem;
+  .about-story-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .story-description {
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  .story-quote-container {
+    margin: 4rem auto 0;
+  }
+
+  .about-founder-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder-text {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .about-bottom-section {
+    margin-top: 8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .section-main-title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .story-title {
+    font-size: 2.8rem;
+  }
+
+  .story-description {
+    font-size: 1.6rem;
+  }
+
+  .card-number {
+    font-size: 12rem;
+    top: -30px;
+    right: -15px;
   }
 
   .principle-card {
-    padding: 2rem;
+    min-height: 240px;
+    padding: 2.5rem 1.5rem;
   }
 
-  .founder-image {
-    max-width: 30rem;
-    height: 35rem;
+  .founder-image-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .big-quote {
+    font-size: 6rem;
+    top: -1.5rem;
+  }
+
+  .story-quote-text {
+    font-size: 1.7rem;
+  }
+
+  .about-top-section {
+    margin-top: 2rem;
+  }
+
+  .about-bottom-section {
+    margin-top: 6rem;
   }
 }
 
-@media (max-width: 480px) {
-  .about-content {
-    gap: 40px;
+@media (max-width: 400px) {
+  .story-title {
+    font-size: 2.4rem;
   }
 
-  .founder-image {
-    max-width: 25rem;
-    height: 25rem;
+  .section-main-title {
+    font-size: 3rem;
+  }
+
+  .card-number {
+    font-size: 10rem;
+  }
+
+  .founder-image-wrapper {
+    width: 180px;
+    height: 180px;
   }
 }

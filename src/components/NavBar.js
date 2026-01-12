@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaMobileAlt } from 'react-icons/fa';
 import './NavBar.css';
 
 const NavBar = () => {
 	const [open, setOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	return (
-		<header className="navbar">
+		<header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
 			<div className="container nav-inner">
 				<a href="#hero" className="nav-logo" aria-label="Hi Dzign Home">
 					<img src="/asset/log.png" alt="Hi Dzign" className="nav-logo-img" />

@@ -1,36 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaArrowDown } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section className="hero" id="hero">
       <div className="hero-background">
-        <div className="image-collage" style={{ transform: `translateX(${scrollY * 0.1}px)` }}>
-          <div className="collage-image image-1">
-            <img src="/asset/brick-wall-1850095_1280.jpg" alt="Brick Wall Interior" />
-          </div>
-          <div className="collage-image image-2">
-            <img src="/asset/interior-4226020_1280.jpg" alt="Modern Interior Design" />
-          </div>
-          <div className="collage-image image-3">
-            <img src="/asset/interior-4226020_1281.jpg" alt="Contemporary Interior" />
-          </div>
-          <div className="collage-image image-4">
-            <img src="/asset/office-4292265_1280.jpg" alt="Modern Office Space" />
-          </div>
-        </div>
+        <img
+          src="/asset/aa.jpg"
+          alt="Hero Background"
+          className="hero-static-bg"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
         <div className="hero-overlay"></div>
       </div>
 
@@ -53,6 +34,40 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* RIGHT VERTICAL TEXT WITH LINES */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        right: '40px',
+        transform: 'translateY(-50%)',
+        zIndex: 20,
+        pointerEvents: 'none',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '30px'
+      }}>
+        {/* Upper Line */}
+        <div style={{ width: '1px', height: '100px', background: '#000000', opacity: 0.6 }}></div>
+
+        <p style={{
+          color: '#000000',
+          fontSize: '0.9rem',
+          letterSpacing: '0.5em',
+          fontWeight: 'bold',
+          writingMode: 'vertical-rl',
+          textOrientation: 'mixed',
+          transform: 'rotate(180deg)',
+          margin: 0,
+          textShadow: '0 1px 3px rgba(0,0,0,0.1)'
+        }}>
+          INTERIOR DESIGN
+        </p>
+
+        {/* Lower Line */}
+        <div style={{ width: '1px', height: '100px', background: '#000000', opacity: 0.6 }}></div>
       </div>
 
       <div className="scroll-indicator">
