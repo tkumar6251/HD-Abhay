@@ -132,6 +132,28 @@
 
 }
 
+@media (max-width: 400px) {
+	.footer {
+		padding-top: 5rem;
+	}
+
+	.footer-logo {
+		height: 6rem;
+		margin-top: 3rem;
+		margin-right: 0;
+	}
+
+	.footer-brand {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}
+
 @media (max-width: 480px) {
 	.footer-links {
 		grid-template-columns: 1fr;

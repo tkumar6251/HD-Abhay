@@ -238,4 +238,24 @@
   .contact-tagline {
     font-size: 1.125rem;
   }
+
+  .contact-item,
+  .action-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .action-icon {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .action-card h3 {
+    font-size: 1.4rem;
+  }
 }

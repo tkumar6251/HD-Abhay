@@ -184,10 +184,22 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.2rem;
+    /* Reduced from 4rem */
+    line-height: 1.1;
   }
 
   .hero-text {
     padding: 20px 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
 }

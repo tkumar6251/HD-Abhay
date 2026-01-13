@@ -81,20 +81,23 @@ function BentImage({ url, bendStrength = 0 }) {
     );
 }
 
-function SpiralItem({ index, url, title, date, count }) {
+const SpiralItem = ({ index, url, title, date, count }) => {
     const groupRef = useRef();
     const scroll = useScroll();
+    const { width } = useThree((state) => state.viewport);
     const [bend, setBend] = useState(0);
 
-    const radius = 8.5;
-    const initialTheta = (index / (count - 1)) * Math.PI * 4 + Math.PI / 2;
+    // Responsive Logic
+    const isMobile = width < 5;
+    const radius = isMobile ? 5.5 : 8.5; // Tighter spiral on mobile
+    const gap = isMobile ? 3.0 : 4.0;    // Closer items on mobile
 
-    const gap = 4.0;
+    // Initial Position
+    const initialTheta = (index / (count - 1)) * Math.PI * 4 + Math.PI / 2;
     const initialY = -index * gap;
 
     const x = Math.cos(initialTheta) * radius;
     const z = Math.sin(initialTheta) * radius;
-
 
     useFrame((state, delta) => {
         if (!groupRef.current) return;
@@ -108,7 +111,10 @@ function SpiralItem({ index, url, title, date, count }) {
         setBend(targetBend);
 
         groupRef.current.rotation.z = distance * 0.05;
-        const scale = 1.35 - Math.min(absDistance * 0.2, 0.5);
+
+        // Dynamic scale based on distance + mobile adjustment
+        const baseScale = isMobile ? 1.0 : 1.35;
+        const scale = baseScale - Math.min(absDistance * 0.2, 0.5);
         groupRef.current.scale.set(scale, scale, scale);
     });
 
@@ -120,7 +126,7 @@ function SpiralItem({ index, url, title, date, count }) {
                 </React.Suspense>
                 <Text
                     position={[0, -2.4, 0]}
-                    fontSize={0.35}
+                    fontSize={isMobile ? 0.25 : 0.35}
                     color="#064E3B"
                     anchorX="center"
                     anchorY="middle"
@@ -129,7 +135,7 @@ function SpiralItem({ index, url, title, date, count }) {
                 </Text>
                 <Text
                     position={[-3.0, 0, 0]}
-                    fontSize={0.5}
+                    fontSize={isMobile ? 0.35 : 0.5}
                     color="#D97706"
                     rotation={[0, 0, Math.PI / 2]}
                     anchorX="center"
@@ -140,17 +146,21 @@ function SpiralItem({ index, url, title, date, count }) {
             </Float>
         </group>
     );
-}
+};
 
-function SpiralContent() {
+const SpiralContent = () => {
     const scroll = useScroll();
     const group = useRef();
+    const { width } = useThree((state) => state.viewport);
+    const isMobile = width < 5;
+
+    // Match gap with SpiralItem
+    const gap = isMobile ? 3.0 : 4.0;
 
     useFrame((state, delta) => {
         const offset = scroll.offset;
         group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, offset * Math.PI * 4, 0.08);
 
-        const gap = 4.0;
         const totalHeight = (items.length - 1) * gap;
 
         group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, offset * totalHeight, 0.08);
@@ -163,7 +173,7 @@ function SpiralContent() {
             ))}
         </group>
     );
-}
+};
 
 const SpiralGallery = () => {
     const containerRef = useRef();
