@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hidezign.in/sitemap.xml
+Sitemap: https://hidzign.com/sitemap.xml
