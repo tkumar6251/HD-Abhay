@@ -43,6 +43,7 @@ function BentImage({ url, bendStrength = 0 }) {
     const texture = useTexture(url);
     const shaderRef = useRef();
 
+
     useFrame(() => {
         if (shaderRef.current) {
             shaderRef.current.uniforms.uBend.value = THREE.MathUtils.lerp(
@@ -50,6 +51,8 @@ function BentImage({ url, bendStrength = 0 }) {
                 bendStrength,
                 0.1
             );
+        } else {
+            // console.log('BentImage: shaderRef.current is NULL');
         }
     });
 
@@ -91,6 +94,7 @@ function SpiralItem({ index, url, title, date, count }) {
 
     const x = Math.cos(initialTheta) * radius;
     const z = Math.sin(initialTheta) * radius;
+
 
     useFrame((state, delta) => {
         if (!groupRef.current) return;
@@ -284,6 +288,7 @@ const SpiralGallery = () => {
                 <ambientLight intensity={0.8} />
                 <spotLight position={[20, 20, 20]} angle={0.2} penumbra={1} intensity={1.5} color="#ffffff" />
                 <spotLight position={[-20, 10, 10]} angle={0.2} penumbra={1} intensity={1.0} color="#fbbf24" />
+
 
                 <Text
                     position={[0, 0, -4]}
