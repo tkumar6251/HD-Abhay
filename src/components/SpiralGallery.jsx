@@ -301,7 +301,7 @@ const SpiralGallery = () => {
 
 
                 <Text
-                    position={[0, 0, -4]}
+                    position={[0, 0, -6]}
                     fontSize={2.5}
                     color="black"
                     font="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvL-7_C_2_gnW_7H86J-z6GYZ9.woff"

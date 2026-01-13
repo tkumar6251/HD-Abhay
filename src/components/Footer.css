@@ -132,7 +132,7 @@
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
 	.footer {
 		padding-top: 5rem;
 	}
@@ -152,11 +152,11 @@
 		flex-direction: column;
 		gap: 1rem;
 	}
-}
 
-@media (max-width: 480px) {
+
+
 	.footer-links {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	.footer-col {
