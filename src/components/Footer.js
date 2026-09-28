@@ -41,7 +41,7 @@ const Footer = () => {
 
 			<div className="footer-bottom">
 				<p className="footer-copy">© {new Date().getFullYear()} Hi Dzign. All rights reserved.</p>
-				<p className="footer-credit">Created by <a href="https://www.kraftwagenksp.com" target="_blank" rel="noreferrer">KRAFTWAGEN KSP PRIVATE LIMITED</a></p>
+				<p className="footer-credit">Created by <a href="https://www.tafinityai.com" target="_blank" rel="noreferrer">TafinityAI</a></p>
 			</div>
 		</footer>
 	);
